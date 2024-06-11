@@ -1,0 +1,27 @@
+<div class="suppliers__inner">
+    <div class="suppliers__info">
+        <div class="suppliers__info-description">
+            <h1 class="suppliers__info-title">{{ title }}</h1>
+            <div class="suppliers__info-text">
+                <p *ngFor="let detail of details">{{ detail }}</p>
+            </div>
+        </div>
+        <div class="suppliers__info-nav">
+            <a 
+            *ngFor="let action of actions"
+            [href]="action.link">
+                <button 
+                    [ngClass]="{'suppliers__info-btn': action.link !== '', 'suppliers__info-btn-no-link': action.link === ''}"
+                    [title]="action.tooltip">{{ action.title }}
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="suppliers__picture">
+        <div class="suppliers__picture-bg">
+            <div class="suppliers__picture-img">
+                <img class="suppliers__picture-logo" [src]="img" [alt]="alias">
+            </div>
+        </div>
+    </div>
+</div>

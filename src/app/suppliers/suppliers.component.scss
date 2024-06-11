@@ -1,0 +1,162 @@
+$fontFamily: 'Nunito Sans';
+$bodyBgColor: gainsboro;
+
+$borderRadius: 1%;
+
+$suppliers__innerWidth: 1792px;
+$suppliers__innerHeight: 408px;
+$suppliers__innerMargin: 0 auto;
+$suppliers__innerBg: white;
+
+$suppliers__infoWidth: 987px;
+$suppliers__infoHeight: 278px;
+
+$suppliers__pictureWidth: 769px;
+
+$suppliers__picture-bgWidth: 693px;
+$suppliers__picture-bgImg: url('images/Mask.png');
+
+$suppliers__info-descriptionHeight: 194px;
+
+$suppliers__info-navWidth: 689px;
+$suppliers__info-navHeight: 44px; 
+
+$suppliers__info-textWidth: 661px;
+
+%suppliers__infoMargin{
+    margin-top: 58px;
+    margin-left: 64px;
+    margin-bottom: 72px;
+}
+
+%suppliers__info-title{
+    line-height: 64px;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+%suppliers__info-text{
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+%suppliers__info-btn{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5%;
+    padding: 12px 16px;
+}
+
+%suppliers__info-btnHover{
+    cursor: pointer;
+}
+
+%forBgImg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $fontFamily;
+    background-color: $bodyBgColor;
+}
+
+.suppliers__inner{
+    background-color: $suppliers__innerBg;
+    display: flex;
+    justify-content: center;
+    margin: $suppliers__innerMargin;
+    width: $suppliers__innerWidth;
+    height: $suppliers__innerHeight;
+    position: relative;
+    border-radius: $borderRadius;
+}
+
+.suppliers__info{
+    width: $suppliers__infoWidth;
+    height: $suppliers__infoHeight;
+    
+    @extend %suppliers__infoMargin;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: $borderRadius;
+}
+
+.suppliers__picture{
+    width: $suppliers__pictureWidth;
+    height: $suppliers__innerHeight;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: $borderRadius;
+} 
+
+.suppliers__picture-bg{
+    width: $suppliers__picture-bgWidth;
+    height: $suppliers__innerHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $borderRadius;
+    background-image: $suppliers__picture-bgImg;
+    @extend %forBgImg;
+}
+
+.suppliers__info-description{
+    width: $suppliers__infoWidth;
+    height: $suppliers__info-descriptionHeight;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: $borderRadius;
+}
+
+.suppliers__info-nav{
+    width: $suppliers__info-navWidth;
+    height: $suppliers__info-navHeight;
+    display: flex;
+    justify-content: space-between;
+    border-radius: $borderRadius;
+    margin-top: 70px;
+}
+
+.suppliers__info-title{
+    @extend %suppliers__info-title;
+}
+
+.suppliers__info-text{
+    width: $suppliers__info-textWidth;
+    @extend %suppliers__info-text;
+}
+
+.suppliers__info-btn{
+    @extend %suppliers__info-btn;
+    background-color: #DBDBF2;
+}
+
+.suppliers__info-btn:hover
+{
+    @extend %suppliers__info-btnHover;
+    background-color: black;
+    color: white;
+}
+
+.suppliers__info-btn-no-link{
+    @extend %suppliers__info-btn;
+    background-color: black;
+    color: white;
+}
+
+.suppliers__info-btn-no-link:hover{
+    @extend %suppliers__info-btnHover;
+    background: linear-gradient(to right, #f00, #00f);
+}

@@ -1,0 +1,32 @@
+<div class="public-purchases__inner">
+    <div class="public-purchases__header">
+        <h4 class="public-purchases__header-title">{{ title }}</h4>
+        <a [href]="actions.link">
+            <button class="public-purchases__header-btn">{{ actions.title }} ></button>
+        </a> 
+    </div>
+    <div class="public-purchases__content">
+
+        <div 
+            *ngFor="let item of content"
+            class="public-purchases__content-cell">
+            <a [href]="item.action.link" class="public-purchases__content-link">
+                <div class="public-purchases__content-info">
+                    <div class="public-purchases__content-buttons">
+                        <button 
+                        *ngIf="item.number !== ''"
+                        class="public-purchases__content-btn public-purchases__content-dk">{{ item.number }}</button>
+                        <button 
+                        *ngIf="item.idNumber !== ''"
+                        class="public-purchases__content-btn public-purchases__content-id">{{ item.idNumber }}</button>
+                    </div>
+                    <div class="public-purchases__content-text">
+                        <p>{{ item.title }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="how-we-buy__inner">
+    <div class="how-we-buy__inner-cell">
+        <div class="how-we-buy__header">
+            <img class="how-we-buy__header-img" [src]="img" alt="bin">
+            <h2 class="how-we-buy__header-title">{{ title }}</h2>
+        </div>
+    </div>
+
+    <div *ngFor="let item of content" 
+        class="how-we-buy__inner-cell">
+        <div class="how-we-buy__section">
+            <img class="how-we-buy__section-img" [src]="item.img" [alt]="item.alias">
+            <div class="how-we-buy__section-content">
+                <h4 class="how-we-buy__section-title"> {{ item.title }} </h4>
+                <p class="how-we-buy__section-descr"> {{ item.details }} </p>
+                <div class="how-we-buy__section-buttons">
+                    <a *ngFor="let action of item.actions"
+                    [href]="action.link">
+                        <button 
+                        [ngClass]="{'how-we-buy__section-btn': action.link !== '', 'how-we-buy__section-btn-no-link': action.link === ''}"
+                        >{{ action.title }}</button>
+                    </a>  
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+ 

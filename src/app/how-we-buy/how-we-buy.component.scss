@@ -1,0 +1,108 @@
+%suppliers__info-btn{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5%;
+    padding: 12px 16px;
+    
+}
+
+%suppliers__info-btnHover{
+    cursor: pointer;
+}
+
+.how-we-buy__inner{
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-gap: 4px;
+}
+
+.how-we-buy__inner-cell{
+    height: 320px;
+    background-color: white;
+    border-radius: 1%;
+}
+
+.how-we-buy__header{
+    // background-color: rgb(92, 207, 207);
+    margin-top: 70px;
+    margin-bottom: 104px;
+    margin-left: 64px;
+    margin-right: 178px;
+    height: 146px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.how-we-buy__header-img{
+    width: 80px;
+}
+
+.how-we-buy__header-title{
+    font-size: 40px;
+    line-height: 46px;
+    font-weight: 700;
+}
+
+.how-we-buy__section{
+    // background-color: aquamarine;
+    height: 180px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 64px;
+    margin-right: 191px;
+    display: flex;
+}
+
+.how-we-buy__section-content{
+    // background-color: rgb(228, 228, 28);
+    margin-top: 11px;
+    margin-bottom: 11px;
+    margin-left: 40px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.how-we-buy__section-title{
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+}
+
+.how-we-buy__section-descr{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.how-we-buy__section-btn{
+    @extend %suppliers__info-btn;
+    background-color: #DBDBF2;
+}
+
+.how-we-buy__section-btn:hover{
+    @extend %suppliers__info-btnHover;
+    background-color: black;
+    color: white;
+}
+
+.how-we-buy__section-btn-no-link{
+    @extend %suppliers__info-btn;
+    background-color: black;
+    color: white;
+}
+
+.how-we-buy__section-btn-no-link:hover{
+    @extend %suppliers__info-btnHover;
+    background: linear-gradient(to right, #f00, #00f);
+}
+
+.how-we-buy__section-buttons{
+    display: flex;
+    gap: 8px;
+}
